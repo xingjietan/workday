@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./prd/styles/index.css">
+</head>
+<body>
+	<div ng-controller="homework">
+		<input type="text" ng-model="searchText" placeholder="search">
+		<table>
+			<thead>
+				<tr>
+					<td ng-click="one(0)">FirstName<em></em></td>
+					<td ng-click="one(1)">LastName<em></em></td>
+					<td ng-click="one(2)">Salary<em></em></td>
+					<td ng-click="one(3)">Salary<em></em></td>
+					<td ng-click="one(4)">Birthday<em></em></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in students | filter:searchText | orderBy:find:untrue">
+					<td>{{item.firstName | uppercase}}</td>
+					<td>{{item.lastName | lowercase}}</td>
+					<td>{{item.salary | currency:""}}</td>
+					<td>{{item.salary | currency:"￥"}}</td>
+					<td>{{item.birthday | date:"yyyy年MM月dd日"}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="./libs/angular.min.js"></script>
+	<script src="./libs/jquery-2.1.1.js"></script>
+	<script src="./prd/scripts/app.js"></script>	
+</body>
+</html>

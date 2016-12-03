@@ -1,0 +1,52 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+input{
+	margin-top: 10px;
+	height: 20px;
+}
+table{
+	border:1px solid #000;
+	border-collapse: collapse;
+	margin-top: 10px;
+	td{
+	border:1px solid #000;
+	text-align: center;
+	padding: 5px 18px 5px 8px;
+	}
+}
+
+thead{
+	td{
+		position: relative;
+		font-weight: 800;
+		em.block{
+			&:after{
+				content: "";        
+				position: absolute;
+				right:3px;
+				top: 10px;
+			    border:10px solid transparent;
+			    border-left-width:6px; 
+			    border-right-width:6px;
+			    border-top-color: #000;			    
+				}
+			}
+		em.none{
+			&:after{
+				content: "";        
+				position: absolute;
+				right:3px;
+				top: 1px;
+			    border:10px solid transparent;
+			    border-left-width:6px; 
+			    border-right-width:6px;
+			    border-bottom-color: #000;		    
+				}
+			}
+			
+		}
+		
+} 
